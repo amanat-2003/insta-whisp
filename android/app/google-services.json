@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1033428983415",
+    "project_id": "insta-whisp",
+    "storage_bucket": "insta-whisp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033428983415:android:8df56b38bb9a77cc0c7072",
+        "android_client_info": {
+          "package_name": "com.example.insta_whisp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033428983415-3bs8ht54ftn7qhtcbv9ap7bn0e9lm22g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.insta_whisp",
+            "certificate_hash": "3dcb81ca2a0b670ddb5e546de900cadf0d2dd378"
+          }
+        },
+        {
+          "client_id": "1033428983415-nn4fuk6vaoi55aj4p6j6p2ptec6pkd26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV2Ut7qZc9F_gExaEdx9RLpsvvDvh9WSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033428983415-g4lv7hm9c67vel5es9bjfd3r85cje6p8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1033428983415-1aqegmtcsjvbn68qa91oa4l6buvvvu55.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.instaWhisp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
