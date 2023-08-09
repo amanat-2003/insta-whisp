@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:insta_whisp/firebase_options.dart';
 import 'package:insta_whisp/state/auth/notifiers/is_logged_in_provider.dart';
 import 'package:insta_whisp/state/auth/providers/authstate_provider.dart';
+import 'package:insta_whisp/state/providers/is_loading_provider.dart';
 import 'package:insta_whisp/utils/logger.dart';
 import 'package:insta_whisp/views/components/loading_screen.dart';
 
@@ -38,6 +39,13 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: Consumer(builder: (context, ref, child) {
+        ref.listen(isLoadingProvider, (_, isLoading) {
+          if (isLoading) {
+            LoadingScreen.instance().show(context: context);
+          } else {
+            LoadingScreen.instance().hide();
+          }
+        });
         final isLoggedIn = ref.watch(isLoggedInProvider);
         if (isLoggedIn) {
           return const MainView();
@@ -67,9 +75,7 @@ class MainView extends ConsumerWidget {
       ),
       body: Center(
         child: TextButton(
-            onPressed: () {
-              LoadingScreen.instance().show(context: context);
-            },
+            onPressed: () {            },
             child: const Text('Show overlay')),
       ),
     );

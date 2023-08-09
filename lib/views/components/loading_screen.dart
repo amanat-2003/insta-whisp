@@ -72,7 +72,7 @@ class LoadingScreen {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const CircularProgressIndicator(
-                        color: Colors.black,
+                        color: Colors.grey,
                       ),
                       const SizedBox(
                         height: 20,
