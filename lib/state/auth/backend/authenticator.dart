@@ -1,12 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:insta_whisp/state/auth/constants/constants.dart';
 import 'package:insta_whisp/state/auth/models/auth_result.dart';
-import 'package:insta_whisp/state/constants/firestore_collection_names.dart';
-import 'package:insta_whisp/state/constants/firestore_field_names.dart';
-import 'package:insta_whisp/state/user_info/backend/user_info_storage.dart';
 import 'package:insta_whisp/state/user_info/typedefs/user_id.dart';
 import 'package:insta_whisp/utils/logger.dart';
 

@@ -6,7 +6,7 @@ import 'package:insta_whisp/firebase_options.dart';
 import 'package:insta_whisp/state/auth/notifiers/is_logged_in_provider.dart';
 import 'package:insta_whisp/state/auth/providers/authstate_provider.dart';
 import 'package:insta_whisp/utils/logger.dart';
-
+import 'package:insta_whisp/views/components/loading_screen.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -65,8 +65,12 @@ class MainView extends ConsumerWidget {
           )
         ],
       ),
-      body: const Center(
-        child: Text('You are on the Main View'),
+      body: Center(
+        child: TextButton(
+            onPressed: () {
+              LoadingScreen.instance().show(context: context);
+            },
+            child: const Text('Show overlay')),
       ),
     );
   }
