@@ -8,12 +8,13 @@ import 'package:insta_whisp/state/auth/providers/authstate_provider.dart';
 import 'package:insta_whisp/state/providers/is_loading_provider.dart';
 import 'package:insta_whisp/utils/logger.dart';
 import 'package:insta_whisp/views/components/loading_screen.dart';
+import 'package:insta_whisp/views/login/login_view.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 17, 54, 218),
+    seedColor: Colors.black,
   ),
   textTheme: GoogleFonts.openSansTextTheme(),
 );
@@ -35,7 +36,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Demo App',
-      darkTheme: theme,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.blueGrey,
+        indicatorColor: Colors.blueGrey,
+      ),
+      // darkTheme: theme,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: Consumer(builder: (context, ref, child) {
@@ -82,25 +88,25 @@ class MainView extends ConsumerWidget {
   }
 }
 
-class LoginView extends ConsumerWidget {
-  const LoginView({super.key});
+// class LoginView extends ConsumerWidget {
+//   const LoginView({super.key});
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(authStateProvider).authResult?.log();
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login View'),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).signInWithGoogle,
-            child: const Text('Log in using Google'),
-          ),
-          // const SizedBox(height: 10),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context, WidgetRef ref) {
+//     ref.watch(authStateProvider).authResult?.log();
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Login View'),
+//       ),
+//       body: Column(
+//         children: [
+//           TextButton(
+//             onPressed: ref.read(authStateProvider.notifier).signInWithGoogle,
+//             child: const Text('Log in using Google'),
+//           ),
+//           // const SizedBox(height: 10),
+//         ],
+//       ),
+//     );
+//   }
+// }
